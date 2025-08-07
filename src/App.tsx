@@ -68,9 +68,7 @@ const WAVE_DATA = [
 ];
 
 // For Confliction Gauntlets, subtract demon tears and tormented bracelet
-const CONFLICTION_GAUNTLETS_ID = 31106;
 const DEMON_TEARS_ID = 31111;
-const TORMENTED_BRACE_ID = 19544;
 
 // Use string IDs for price mapping to match API response
 const PRICE_IDS = ["31088", "31106", "31115", "31111", "19544"];
@@ -256,7 +254,6 @@ function App() {
   // Calculations
   const totalValue = runs.reduce((sum, run) => sum + expectedValue(run.level, prices), 0);
   const totalSeconds = runs.reduce((sum, run) => sum + run.seconds, 0);
-  const totalMinutes = totalSeconds / 60;
   const gpPerHour = totalSeconds > 0 ? (totalValue * 3600) / totalSeconds : 0;
 
   // Accordion state for each run
